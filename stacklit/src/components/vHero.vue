@@ -2,7 +2,7 @@
   <div id="hero">
     <div class="text">
       <span class="title">
-        Test your programming skills everywhere. Become the best debugger.
+        Test your programming skills everywhere. <br>Become the best debugger.
       </span>
       <span class="explanation">
         Use the proven to be efficient flashcard method to study real coding cases, sharpening your coding skills.
@@ -13,7 +13,7 @@
         </a>
       </div>
     </div>
-    <img :src="heroImage" id="hero-image"/>
+    <img :src="heroImage" id="hero-image" class="noinvert"/>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
 export default {
   name: 'vNavBar',
   data: () => ({
-    heroImage: require('@/assets/illustrations/ilustracion-concepto-creador-sitio-web/4300580.jpg'),
+    heroImage: require('@/assets/illustrations/ilustracion-concepto-creador-sitio-web/4300580.png'),
     authenticated: false,
   }),
   mounted() {
@@ -36,8 +36,9 @@ export default {
     max-height: 400px;
     width: 100h;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     overflow: hidden;
+    box-sizing: border-box;
   }
   #hero-image {
     height: 100%;
@@ -47,8 +48,14 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     padding-left: 30px;
     padding-top: 50px;
+    height: 50vh;
+    box-sizing: border-box;
+    max-width: 600px;
+    width: 50%;
+    flex: 1;
   }
   .title {
     font-size: 30px;

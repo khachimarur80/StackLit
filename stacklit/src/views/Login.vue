@@ -54,6 +54,25 @@
 </template>
 
 <script>
+
+class User {
+  constructor(username) {
+    this.username = username
+    this.joined = new Date().toLocaleDateString('en-GB')
+    this.performance = [
+      { 
+        tag: "Total",
+        attempts: 0,
+        solved: 0
+      }
+    ]
+    this.longestStreak = 0
+    this.totalTime = 0
+    this.questions = []
+    this.starred = []
+  }
+}
+
 export default {
   name: 'vLogin',
   data: () => ({
@@ -68,6 +87,7 @@ export default {
       event.preventDefault()
       window.location.href = window.location.protocol + "//" + window.location.host + '/dashboard'
       localStorage.setItem('authenticated', 'true')
+      localStorage.setItem('stackLitUser', JSON.stringify(new User(this.formData.username)))
     },
   },
   computed: {

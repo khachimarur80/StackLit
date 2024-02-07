@@ -1,15 +1,12 @@
 <template>
   <div id="navBar">
     <a class="navbar-title" href="/">
-      <img src="@/assets/logo.png" height="40px"/>
+      <img src="@/assets/logo.png" height="40px" class="noinvert"/>
       StackLit
     </a>
     <div class="spacer">
     </div>
     <div class="navbar-items">
-      <!--<a class="navbar-item" v-if="authenticated && site != 'documentation'" href="/documentation">
-        Documentation
-      </a>-->
       <a class="navbar-item" v-if="authenticated && site != 'dashboard'" href="/dashboard">
         Dashboard
       </a>
@@ -18,6 +15,9 @@
       </a>
       <a class="navbar-item" v-if="authenticated && site != 'leaderboard'" href="/leaderboard">
         Leaderboard
+      </a>
+      <a class="navbar-item" v-if="authenticated && site != 'profile'" href="/profile">
+        Profile
       </a>
       <a class="navbar-item" v-if="authenticated" @click="logout">
         Logout
@@ -60,6 +60,7 @@ export default {
     display: flex;
     align-items: center;
     padding: 10px;
+    background: linear-gradient(to bottom, var(--background) 75%, rgb(255, 255, 255, 0) 100%);
   }
   .navbar-title {
     color: var(--text);
@@ -94,7 +95,7 @@ export default {
   }
 
   .navbar-item:hover {
-    background: var(--background-dark);
+    background: var(--background-light);
   }
   .navbar-item:active {
     border-color: var(--primary);

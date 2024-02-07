@@ -6,6 +6,7 @@ import Login from '@/views/Login.vue';
 import Dashboard from '@/views/DashBoard.vue'
 import Library from '@/views/Library.vue'
 import LeaderBoard from '@/views/LeaderBoard.vue'
+import vProfile from '@/views/Profile.vue'
 
 const routes = [
   { path: '/', component: Home, meta: { title: 'StackLit' } },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/dashboard', component: Dashboard, meta: { title: 'StackLit | Dashboard' } },
   { path: '/library', component: Library, meta: { title: 'StackLit | Library' } },
   { path: '/leaderboard', component: LeaderBoard, meta: { title: 'StackLit | Leaderboard' } },
+  { path: '/profile', component: vProfile, meta: { title: 'StackLit | Profile' } },
 ];
 
 const router = createRouter({
