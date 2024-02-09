@@ -2,7 +2,7 @@
   <div id="signup">
     <div class="signup-form-container">
       <div class="signup-form-header">
-        <img src="@/assets/logo.png" height="60px"/>
+        <img src="@/assets/logo.png" height="60px" class="noinvert"/>
         <h1>
           Sign Up
         </h1>
@@ -172,6 +172,7 @@ export default {
 <style scoped>
   #signup {
     height: fit-content;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -179,6 +180,7 @@ export default {
     overflow-y: scroll;
     padding-top: 50px;
     padding-bottom: 50px;
+    background: var(--background);
   }
   .signup-form-container {
     display: flex;
@@ -209,6 +211,8 @@ export default {
     gap: 10px;
     justify-content: center;
     transition: background .15s ease-in-out;
+    color: var(--text);
+    background: var(--background);
   }
   .continue-with:hover {
     background: var(--background-dark);

@@ -2,7 +2,7 @@
   <div id="login">
     <div class="login-form-container">
       <div class="login-form-header">
-        <img src="@/assets/logo.png" height="60px"/>
+        <img src="@/assets/logo.png" height="60px" class="noinvert"/>
         <h1>
           Login
         </h1>
@@ -100,13 +100,16 @@ export default {
 <style scoped>
   #login {
     height: fit-content;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    background: var(--background);
+  }
+  #login > * {
+    overflow-x: hidden;
   }
   .login-form-container {
     display: flex;
@@ -127,7 +130,7 @@ export default {
   .continue-with {
     width: 300px;
     border: 1px solid var(--secondary);
-    background: white;
+    background: var(--background);
     padding: 10px 20px 10px 20px;
     border-radius: 8px;
     margin: 5px;
@@ -137,6 +140,7 @@ export default {
     gap: 10px;
     justify-content: center;
     transition: background .15s ease-in-out;
+    color: var(--text);
   }
   .continue-with:hover {
     background: var(--background-dark);
